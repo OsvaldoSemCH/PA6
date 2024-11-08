@@ -36,10 +36,18 @@ const styles = StyleSheet.create
     }
 });
 
-export default ({ onPress, text, size, theme }) =>
+interface BtnParams
 {
-    const buttonStyles = [styles.button];
-    const textStyles = [styles.text];
+    onPress: any;
+    text: string;
+    size: string;
+    theme: string;
+}
+
+export default ({ onPress, text, size, theme } : BtnParams) =>
+{
+    const buttonStyles :any[] = [styles.button];
+    const textStyles :any[] = [styles.text];
 
     if(size === "double")
     {
